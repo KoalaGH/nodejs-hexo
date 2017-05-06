@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: 我 | 
+            React Native入门2&lt;mac，windows下开发环境搭建&gt; | 
         
         koala
     </title>
@@ -32,7 +32,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="koala">
     <meta name="description" content="blog.koala.me">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,android,ReactNative,开发环境">
 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -58,9 +58,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://blog.koala.me">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: 我 | koala">
+    <meta property="og:title" content="React Native入门2&lt;mac，windows下开发环境搭建&gt; | koala">
     <meta property="og:description" content="blog.koala.me">
-    
+    <meta property="og:article:tag" content="android"> <meta property="og:article:tag" content="ReactNative"> <meta property="og:article:tag" content="开发环境"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -221,97 +221,307 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
         
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/07/page/">page</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            这是新的开始，我用hexo创建了第一篇文章。
-通过下面的命令，就可以创建新文章
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/07/page/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="koala's avatar">
-            </div>
-            <div>
-                <strong>koala</strong>
-                <span>4月 07, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/日志/">日志</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                React Native入门2<mac，windows下开发环境搭建>
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>koala</strong>
+        <span>7月 10, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/ReactNative/">ReactNative</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/android/">android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/开发环境/">开发环境</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=React Native入门2&lt;mac，windows下开发环境搭建&gt;&url=http://blog.koala.me//2016/07/10/React Native入门2&lt;mac，windows下开发环境搭建&gt;/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=React Native入门2&lt;mac，windows下开发环境搭建&gt;&url=http://blog.koala.me//2016/07/10/React Native入门2&lt;mac，windows下开发环境搭建&gt;/index.html&via=koala" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.koala.me//2016/07/10/React Native入门2&lt;mac，windows下开发环境搭建&gt;/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://blog.koala.me//2016/07/10/React Native入门2&lt;mac，windows下开发环境搭建&gt;/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p><em>本文主要讲如何在MAC和windows操作系统下搭建RN开发环境，以及需要使用到的插件安装。</em></p>
+<p>RN可以在Windows和MAC两个操作系统下搭建，但建议大家在MAC操作系统下搭建，因为在Windows下搭建最大的问题就是IOS平台的测试问题，不过也不是没有办法—–<a href="http://jingyan.baidu.com/article/14bd256e4daf61bb6d261292.html" target="_blank" rel="external">如何在window上装MAC系统</a></p>
+<p>在搭建环境之前建议大家先去阅读RN的最新版本说明<a href="http://reactnative.cn.docs/getting-started.html#content" target="_blank" rel="external">RN官方说明文档</a></p>
+<p>####Windows下的React Native开发环境搭建</p>
+<blockquote>
+<p>首先需要安装node.js<br>进入node.js官网下载页面下载5.0以上的稳定版<a href="http://www.nodejs.org" target="_blank" rel="external">node.js下载</a><br>然后在下载git软件 已经安装了的就不用安装了<a href="http://www.git-scm.com/downloads" target="_blank" rel="external">git下载</a></p>
+</blockquote>
+<p>下载完成后进入cmd命令行窗口输入git，按下回车键如果命令行出现了下图所示，则表示安装正确。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2001089-663387bfc835aef9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="7EBEAA13-6257-4350-8FB2-133DC102C103.png"></p>
+<p>接下来需要以管理员身份启动命令行窗口，打开Windows操作系统安装盘下windows\system32文件夹，选择cmd.exe文件单击右键选择管理员身份打开。<br>在命令行窗口输入：</p>
+<ul>
+<li>npm install -g nrm，安装nrm模块方便切换npm下载源</li>
+</ul>
+<p>然后在命令行输入:</p>
+<ul>
+<li>npm install -g npm@2 ，安装npm2</li>
+</ul>
+<p>如果有装VPN可以翻墙的话直接输入：</p>
+<ul>
+<li>npm install -g react-native-cli,安装ReactNative</li>
+</ul>
+<p>如果没有的话先输入这条命令：</p>
+<ul>
+<li>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a>, 这条命令创建了一个名为cnpm的安装点，这个安装点将从淘宝提供的npm镜像站点安装ReactNative，然后在输入npm install -g react-native-cli。</li>
+</ul>
+<p>至此Windos下RN开发环境搭建完成</p>
+<p>####Mac下开发环境搭建<br>首先下载最新版本的xcode安装，安装后启动同意用户协议。<br>进入mac命令行输入：</p>
+<ul>
+<li>ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/homebrew/install/master/install" target="_blank" rel="external">https://raw.githubusercontent.com/homebrew/install/master/install</a>)”</li>
+</ul>
+<p>中途需要按下回车输入超级用户口令，即你的账户密码。安装成功后会显示Installation successful！。</p>
+<p>然后需要安装Node.js：</p>
+<blockquote>
+<p>进入<a href="https://nodejs.org" target="_blank" rel="external">nodejs下载</a> ,安装最新稳定版</p>
+</blockquote>
+<p>   MAC系统装好自己就设置好了PATH环境变量，不需要自己设置</p>
+<p>然后安装NVM，在命令行输入：</p>
+<ul>
+<li>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh" target="_blank" rel="external">https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh</a> | bash</li>
+</ul>
+<p>等待安装完成后，输入exit，在重新打开一个新的命令行窗口，输入echo $NVM_DIR,按下回车键，如果窗口中出现/User/你的用户名/.nvm，则表明NVM安装成功</p>
+<p>然后在命令行输入：</p>
+<ul>
+<li>nvm install ndoe &amp;&amp; nvm alias default node</li>
+</ul>
+<p>然后需要安装flow软件包。但在安装前需要先在命令行输入：</p>
+<ul>
+<li>sudo chown -R $USER /user/local/lib</li>
+<li>sudo chown -R &amp;USER /user/local<br>然后在输入：</li>
+<li>brew install watchman</li>
+<li>brew install flow</li>
+</ul>
+<p>最后我我们就可以安装ReactNative了，输入：</p>
+<ul>
+<li>sudo npm install -g react-native-cli<br>按下回车，输入用户口令，等待完成安装。</li>
+</ul>
+<p>接下来就可以使用ReactNative开发了</p>
+<p>####代码开发工具<br>使用sublime Text3开发，如果你已经是sublime用户请确认是否安装JSFormat插件。</p>
+<blockquote>
+<p><a href="www.sublimetext.com/3">sublime安装</a></p>
+</blockquote>
+<p>第一次使用sublime的用户需要安装sublime的包管理器</p>
+<blockquote>
+<p><a href="https://packagecontrol.io/installation" target="_blank" rel="external">安装sublime包管理器</a></p>
+</blockquote>
+<p>安装成功后重启sublime<br>sublime还有很多好用的插件，大家可以根据需求自行搜索，这里就不细说了</p>
+<p>####安装React Dev tool<br>安装React Dev tool需要使用Chrome浏览器，chrome下载地址大家自行百度。</p>
+<p>下载完成后，输入网址：<a href="https://github.com/facebook/react-devtools" target="_blank" rel="external">下载React Dev tool</a>，进入网址，如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2001089-520626ea10f89146.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="4E168F53-3EA2-4FCC-937D-1128086B1A7B.jpeg"></p>
+<p>点击进入图中箭头所示，下载最新版本的以react-devtools-v-0.14.6.crx的文件，注意是CRX后缀,如果有更新版本的crx下最新版的。</p>
+<p>然后打开chrome浏览器，从设置中找到扩展程序，打开将下载的crx文件直接拖入，点击确认安装，并在允许访问文件网址前打钩。完成后如下图所示：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2001089-1357e011e4e26ad5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="06732868-05B4-4D27-B47A-6D06066A8C24.png"></p>
+<p>到这里需要准备的东西就差不多完成了，马上开始你的第一个RN项目吧！</p>
+<p>下一章会讲开发第一个ReactNative程序，如果你对ReactNative还不了解的话建议先去读一读我的上一篇文章<a href="http://www.jianshu.com/p/16beb5f57af4" target="_blank" rel="external">React Native入门一&lt;初识ReactNative&gt;</a></p>
+<p>有写的不清楚的地方请见谅，<br><em>ps:关注<a href="http://www.jianshu.com/collection/45054b9e38c7" target="_blank" rel="external">ReactNative开发经验集</a>，那里有更多的小伙伴和更丰富的RN学习资源！</em></p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/07/06/React Native入门一<初识ReactNative>/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/07/22/React Native入门三<第一个React Nativec程序> /" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -457,6 +667,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

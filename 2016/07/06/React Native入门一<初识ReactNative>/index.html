@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: 我 | 
+            React Native入门一&lt;初识ReactNative&gt; | 
         
         koala
     </title>
@@ -32,7 +32,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="koala">
     <meta name="description" content="blog.koala.me">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,android,ReactNative,开发环境">
 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -58,9 +58,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://blog.koala.me">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: 我 | koala">
+    <meta property="og:title" content="React Native入门一&lt;初识ReactNative&gt; | koala">
     <meta property="og:description" content="blog.koala.me">
-    
+    <meta property="og:article:tag" content="android"> <meta property="og:article:tag" content="ReactNative"> <meta property="og:article:tag" content="开发环境"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -221,97 +221,263 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
         
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/07/page/">page</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            这是新的开始，我用hexo创建了第一篇文章。
-通过下面的命令，就可以创建新文章
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/07/page/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="koala's avatar">
-            </div>
-            <div>
-                <strong>koala</strong>
-                <span>4月 07, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/日志/">日志</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                React Native入门一<初识ReactNative>
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>koala</strong>
+        <span>7月 06, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/ReactNative/">ReactNative</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/android/">android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/开发环境/">开发环境</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=React Native入门一&lt;初识ReactNative&gt;&url=http://blog.koala.me//2016/07/06/React Native入门一&lt;初识ReactNative&gt;/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=React Native入门一&lt;初识ReactNative&gt;&url=http://blog.koala.me//2016/07/06/React Native入门一&lt;初识ReactNative&gt;/index.html&via=koala" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.koala.me//2016/07/06/React Native入门一&lt;初识ReactNative&gt;/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://blog.koala.me//2016/07/06/React Native入门一&lt;初识ReactNative&gt;/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>#####初识React Native</p>
+<p>2015年3月26日,FaceBook公司正式对外发布了React Native</p>
+<blockquote>
+<p>更详细的介绍请移步 <a href="http://reactnative.cn/" target="_blank" rel="external">ReactNative中文网</a></p>
+</blockquote>
+<p>#####React Native是什么<br>使用React Native开发者可以更高效的开发移动应用，ReactNative的诞生就是为了能在保持原生良好的交互体验的同时又极大的提高开发效率</p>
+<p>在使用React Native之前需要先了解一下React、React.js、React Native三者之间的关系：</p>
+<ul>
+<li>React是一套基础框架，是一套基础设计实现理念</li>
+<li>React.js是基于React开发出来的一套网页开发框架</li>
+<li>React Native基于React开发的跨平台移动应用开发框架，要想使用React Native需要用到JavaScrip</li>
+</ul>
+<p>#####ReactNative的优点</p>
+<ul>
+<li><p>ReactNative(以下简称RN)支持目前最主流的android平台和ios平台，使用RN开发的代码可以只经过微量的改动就能运行于两大平台，极大的提高了开发效率和开发速度，React框架并不追求一次编写，处处运行，React认为不同的平台应该有不同的平台特色，交互，体验，而React把不同平台的能力分为跨平台能力与平台特色能力，它提倡的是一次学习，处处编写。</p>
+</li>
+<li><p>RN支持混合开发、即RN代码与原生代码混合使用在保证用户体验的同时大大提高开发效率，比如RN的强项是Ui 界面，而且RN拥有优秀的Ui开发框架，就可以使用RN开发UI界面使用原生开发界面逻辑。</p>
+</li>
+<li><p>RN强大的ui开发能力，开发的同学应该都知道在开发中大概有百分之七十的时间是在写ui，而使用RN开发至少能为你节省一半的时间，而且相信移动前端开发的同学都清楚，ui开发中有一个头疼的问题就是对于不同机型的适配，关于适配的操作应该也是操蛋无比，但是RN在ui适配上的处理让开发者几乎不用考虑适配问题</p>
+</li>
+<li>RN的热修补技术<br>因为RN使用JavaScrip语言编写，而JS属于脚本语言，何为脚本语言，能够随时部署，而不需要耗时的编译/打包过程。相信移动端开发的开发者都清楚多么迫切的需要热修补</li>
+</ul>
+<p>#####React Native的缺点</p>
+<ul>
+<li>比纯原生应用内存消耗略大<br>-不过也没有大多少，几乎是可以忽略不计的，再加上现在千元机手机内存3G+了所以我认为这个不足之处不足为虑</li>
+<li>安装包比原生安装包略大<br>-这个就不用说了，现在随便一个千元机就16g的存储表示无所谓</li>
+</ul>
+<p>#####使用React Native<br>如果你是一名android或iOS原生开发者，在学习RN之前建议你先把javascript基础知识语法了解一下，对于有开发经验的同学来说大概半天就能看完基础，看完之后再进行RN开发会顺畅很多。<br>如果你是一个网页前端开发者有JS开发基础，那你需要了解一下objectC和android的大概实现机制</p>
+<p>关于于RN的介绍就到这里了，下一章会具体讲在<a href="http://www.jianshu.com/p/40d8630c1d9b" target="_blank" rel="external">Windows和MAC上安装RN的开发环境</a>。</p>
+<p>关于ReactNative基础系列的文章我会持续更新，每周至少一篇，希望和大家共同学习，共同进步！</p>
+<p><em>ps:关注<a href="http://www.jianshu.com/collection/45054b9e38c7" target="_blank" rel="external">ReactNative开发经验集</a>，那里有更多的小伙伴和更丰富的RN学习资源！</em></p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/05/09/30分钟上手最火android网络请求框架Retrofit/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/07/10/React Native入门2<mac，windows下开发环境搭建>/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -457,6 +623,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

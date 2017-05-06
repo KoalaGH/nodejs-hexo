@@ -10,7 +10,7 @@
     
     <title>
         
-            标签: 我 | 
+            React Native入门三&lt;第一个React Nativec程序&gt; | 
         
         koala
     </title>
@@ -32,7 +32,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="koala">
     <meta name="description" content="blog.koala.me">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,android,ReactNative,开发环境">
 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -58,9 +58,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://blog.koala.me">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: 我 | koala">
+    <meta property="og:title" content="React Native入门三&lt;第一个React Nativec程序&gt; | koala">
     <meta property="og:description" content="blog.koala.me">
-    
+    <meta property="og:article:tag" content="android"> <meta property="og:article:tag" content="ReactNative"> <meta property="og:article:tag" content="开发环境"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -221,97 +221,275 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
         
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2017/04/07/page/">page</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            这是新的开始，我用hexo创建了第一篇文章。
-通过下面的命令，就可以创建新文章
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2017/04/07/page/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="koala's avatar">
-            </div>
-            <div>
-                <strong>koala</strong>
-                <span>4月 07, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/日志/">日志</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                React Native入门三<第一个React Nativec程序>
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>koala</strong>
+        <span>7月 22, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/ReactNative/">ReactNative</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/android/">android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/开发环境/">开发环境</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=React Native入门三&lt;第一个React Nativec程序&gt;&url=http://blog.koala.me//2016/07/22/React Native入门三&lt;第一个React Nativec程序&gt; /index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=React Native入门三&lt;第一个React Nativec程序&gt;&url=http://blog.koala.me//2016/07/22/React Native入门三&lt;第一个React Nativec程序&gt; /index.html&via=koala" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.koala.me//2016/07/22/React Native入门三&lt;第一个React Nativec程序&gt; /index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://blog.koala.me//2016/07/22/React Native入门三&lt;第一个React Nativec程序&gt; /index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>上一章已经讲了如何搭建开发环境,如果你还不清楚如何搭建环境请先移步<a href="http://www.jianshu.com/p/40d8630c1d9b" target="_blank" rel="external">搭建开发环境</a>，现在就来使用RN开发出你的第一个Hello Wrold吧。</p>
+<ul>
+<li>首先初始化一个项目<br>打开命令行窗口，进入我们希望建立的项目文件的父目录:<br>(如 cd /Users/file/Desktop/reactnative)<br>进入父目录后输入命令：<blockquote>
+<p>react-native init ReactNative</p>
+</blockquote>
+</li>
+</ul>
+<p>其中ReactNative表示你希望建立的工程名，第一次建立会比较慢，慢的程度取决于你网速，在mac下会更慢，因为他会同时下载android和ios平台的所需数据，请耐心等待。<br>当出现如下图所示，则表示初始化成功，<br><img src="http://upload-images.jianshu.io/upload_images/2001089-32602e04be02399b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="初始化成功"></p>
+<p>大家可以去刚才指定的文件目录看到已经初始化完成的项目文件，项目结构如下图所示，分别有android和ios工程文件，然后使用命令行窗口进入此目录下cd ReactNative,然后执行升级命令：</p>
+<blockquote>
+<p>react-native upgrade</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/2001089-b99637efeafe7d19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ReactNative文件结构"></p>
+<p>接下来就我们就把这个RN项目运行起来了，android的话建议大家使用android手机调试，IOS的话用自带的模拟器。</p>
+<p>####运行在android平台<br>首先把数据线连接上电脑和你的android手机，手机请打开开发者模式的usb调试。然后在命令行输入命令:adb device 如果手机连接正确，会看到如下显示：</p>
+<blockquote>
+<p>list of devices attached<br>637b3a75     device</p>
+</blockquote>
+<p>  如没有显示，则表示没有连接成功，无法调试，如果你的测试机是android5.0以上的系统，还需要输入如下命令：</p>
+<blockquote>
+<p>adb reverse tcp:8081 tcp:8081</p>
+</blockquote>
+<p> 这条命令是通过adb反向代理端口，将电脑的8081端口反向代理到测试机上。<br>如果测试是5.0一下则不需要执行以上命令。</p>
+<p>然后在安装目录下输入命令</p>
+<blockquote>
+<p>react-native run-android</p>
+</blockquote>
+<p>此命令会编译android项目并将安装包安装到你的测试机中，此命令第一次输入的时间可能会比较长，之后就会很快了。<br>如果你使用的是Windows系统，程序安装好之后在手机上会显示红色屏幕，这是因为电脑上的服务环境还没有启动，请在在命令行输入命令：</p>
+<blockquote>
+<p>react-native start</p>
+</blockquote>
+<p>如果使用的测试机或模拟器低于5.0版本也会显示红色屏幕，按下menu键或者摇动手机，会在屏幕上弹出菜单，然后选择”Dev Setting”，在选择”Debug server host&amp;port for device”，在弹出框中输入当前电脑的ip地址,（如不知道地址在命令行输入ipconfig可以找到)，如当前IP为192.168.1.5，就在输入框中输入192.168.1.5:8081点击确定返回红色界面在点击Reload JavaScript按钮，这时界面就应该出来了。<br>如果运行中出现如下图错误，则需要在android目录下加入local.properties文件，如果你有原来运行过的android工程则可以直接拷贝过来就行了。<br>如果没有则自己创建一个,在里面输入：<br>sdk.dir=你的android SDK路径 如:(/Users/koala/Library/Android/sdk)</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2001089-c3ca9b3a73b04aca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="android-bug.png"></p>
+<ul>
+<li>注：android5.0以上的手机每次运行都需要输入adb reverse tcp:8081 tcp:8081命令和react-native start命令</li>
+</ul>
+<p>####运行在IOS平台<br>使用ios平台相对比android容易很多<br>首先进入你刚才创建的ReactNative文件，进入ios子目录，点击Xcode工程文件，启动Xcode，xcode工程文件如下图所示:<br><img src="http://upload-images.jianshu.io/upload_images/2001089-535ba614884a167b.png?imageMogr2/auto-orient/strip%7CimageView2/1/w/200" alt="xcode.png"></p>
+<p>Xcode启动起来以后，你会看到如下图所示，</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2001089-35de804ad1da8b31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="rn工程.png"></p>
+<p>点击运行按钮，选择需要的调试机器，然后模拟器就会启动起来了。<br>同时会启动起来的还有一个命令行窗口这个窗口是调试服务器窗口，这个窗口不能关闭。<br>如果不出意外的话，你就会在你的模拟器上看到如下图所示，则表示你的RN项目运行成功了！</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2001089-be0ca4df0bcd79e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="react-native.png"></p>
+<p>如果你使用iphone手机调试的话会比较麻烦，详情请参阅<a href="http://reactnative.cn/docs/0.28/running-on-device-ios.html#content" target="_blank" rel="external">在真机上运行</a></p>
+<p><em>ps:关注<a href="http://www.jianshu.com/collection/45054b9e38c7" target="_blank" rel="external">ReactNative开发经验集</a>，那里有更多的小伙伴和更丰富的RN学习资源！</em></p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/07/10/React Native入门2<mac，windows下开发环境搭建>/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/08/10/一些非常有用的RN进阶经验集合/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -457,6 +635,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
