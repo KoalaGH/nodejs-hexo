@@ -10,7 +10,7 @@
     
     <title>
         
-            分类: ReactNative | 
+            ScrollView,ViewPager,ListView等可滚动的View嵌套WebView时的滑动事件处理 | 
         
         koala
     </title>
@@ -32,7 +32,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="koala">
     <meta name="description" content="blog.koala.me">
-    <meta name="keywords" content="null">
+    <meta name="keywords" content="null,android,WebView,ViewPager,滑动冲突">
 
     <!-- Favicons -->
     <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -58,9 +58,9 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://blog.koala.me">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: ReactNative | koala">
+    <meta property="og:title" content="ScrollView,ViewPager,ListView等可滚动的View嵌套WebView时的滑动事件处理 | koala">
     <meta property="og:description" content="blog.koala.me">
-    
+    <meta property="og:article:tag" content="android"> <meta property="og:article:tag" content="WebView"> <meta property="og:article:tag" content="ViewPager"> <meta property="og:article:tag" content="滑动冲突"> 
 
     <!--[if lte IE 9]>
         <link rel="stylesheet" href="/css/ie-blocker.css">
@@ -221,276 +221,289 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
     
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-    <!-- Normal Post -->
-    
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
         
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script>
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/08/10/一些非常有用的RN进阶经验集合/">一些非常有用的RN进阶经验集合</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/08/10/一些非常有用的RN进阶经验集合/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="koala's avatar">
-            </div>
-            <div>
-                <strong>koala</strong>
-                <span>8月 10, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/ReactNative/">ReactNative</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/07/22/React Native入门三&lt;第一个React Nativec程序&gt; /">React Native入门三&lt;第一个React Nativec程序&gt;</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            上一章已经讲了如何搭建开发环境,如果你还不清楚如何搭建环境请先移步
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/07/22/React Native入门三&lt;第一个React Nativec程序&gt; /" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="koala's avatar">
-            </div>
-            <div>
-                <strong>koala</strong>
-                <span>7月 22, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/ReactNative/">ReactNative</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/07/10/React Native入门2&lt;mac，windows下开发环境搭建&gt;/">React Native入门2&lt;mac，windows下开发环境搭建&gt;</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            本文主要讲如何在MAC和windows操作系统下搭建RN开发环境，以及需要使用到的插件安装。
-RN可以在Window...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/07/10/React Native入门2&lt;mac，windows下开发环境搭建&gt;/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="koala's avatar">
-            </div>
-            <div>
-                <strong>koala</strong>
-                <span>7月 10, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/ReactNative/">ReactNative</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2016/07/06/React Native入门一&lt;初识ReactNative&gt;/">React Native入门一&lt;初识ReactNative&gt;</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            #####初识React Native
-2015年3月26日,FaceBook公司正式对外发布了React Native
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/07/06/React Native入门一&lt;初识ReactNative&gt;/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="koala's avatar">
-            </div>
-            <div>
-                <strong>koala</strong>
-                <span>7月 06, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                <a class="post_category-link" href="/categories/ReactNative/">ReactNative</a>
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script>
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                ScrollView,ViewPager,ListView等可滚动的View嵌套WebView时的滑动事件处理
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>koala</strong>
+        <span>6月 23, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/ViewPager/">ViewPager</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/WebView/">WebView</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/android/">android</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/滑动冲突/">滑动冲突</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ScrollView,ViewPager,ListView等可滚动的View嵌套WebView时的滑动事件处理&url=http://blog.koala.me//2017/06/23/scrollview,viewpager,listview等可滚动的view嵌套webview时的滑动冲突处理/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=ScrollView,ViewPager,ListView等可滚动的View嵌套WebView时的滑动事件处理&url=http://blog.koala.me//2017/06/23/scrollview,viewpager,listview等可滚动的view嵌套webview时的滑动冲突处理/index.html&via=koala" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.koala.me//2017/06/23/scrollview,viewpager,listview等可滚动的view嵌套webview时的滑动冲突处理/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://blog.koala.me//2017/06/23/scrollview,viewpager,listview等可滚动的view嵌套webview时的滑动冲突处理/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>#####ScrollView,ViewPager,ListView等可滚动的View嵌套WebView时的滑动冲突处理</p>
+<p>如何优雅的解决这些复杂嵌套的滚动事件处理: </p>
+<p> android的webView给我提供了这个回调方法onOverScrolled(int scrollX, int scrollY, boolean clampedX, boolean clampedY)。</p>
+<p>  重写这个回调方法，它会告诉我们一些滚动事件。<br>我们来看它返回的4个参数：  </p>
+<ul>
+<li><p>scrollX:当前View的横向滚动距离</p>
+</li>
+<li><p>scrollY:当前View的纵向滚动距离</p>
+</li>
+<li><p>clampedX:当前View横向方向是否还可滚动</p>
+</li>
+<li><p>clampedY:当前View纵向方向是否还可滑动</p>
+</li>
+</ul>
+<p>有了上面这些条件在配合requestDisallowInterceptTouchEvent（）就可以顺利的实现滑动了。<br>requestDisallowInterceptTouchEvent（）简单的来说就是告诉父View当前事情是我来处理还是父View来处理。<br>传true时告诉父View滑动事件我自己处理;<br>传false时告诉父View滑动时间你来处理;<br>下面帖上完整代码处理ViewPager嵌套WebView:  </p>
+<pre><code>public class ScrollWebView extends WebView {
+
+public ScrollWebView(Context context) {
+    super(context);
+}
+
+public ScrollWebView(Context context, AttributeSet attrs) {
+    super(context, attrs);
+}
+
+public ScrollWebView(Context context, AttributeSet attrs, int defStyleAttr) {
+    super(context, attrs, defStyleAttr);
+}
+
+private boolean isScrollX = false;
+
+@Override
+public boolean onTouchEvent(MotionEvent event) {
+    if (MotionEventCompat.getPointerCount(event) == 1) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                isScrollX = false;
+                //事件由webview处理
+                getParent().getParent()
+                        .requestDisallowInterceptTouchEvent(true);
+                break;
+            case MotionEvent.ACTION_MOVE:
+                //嵌套Viewpager时
+                getParent().getParent()
+                        .requestDisallowInterceptTouchEvent(!isScrollX);
+                break;
+            default:
+                getParent().getParent()
+                        .requestDisallowInterceptTouchEvent(false);
+        }
+    } else {
+        //使webview可以双指缩放（前提是webview必须开启缩放功能，并且加载的网页也支持缩放）
+        getParent().getParent().
+                requestDisallowInterceptTouchEvent(true);
+    }
+    return super.onTouchEvent(event);
+}
+
+//当webview滚动到边界时执行
+@Override
+protected void onOverScrolled(int scrollX, int scrollY, boolean clampedX, boolean clampedY) {
+    super.onOverScrolled(scrollX, scrollY, clampedX, clampedY);
+    isScrollX = clampedX;
+}
+}
+</code></pre>
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+
+
+
+
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/02/22/可能是最详细的UCrop源码解析/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
